@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS driver_db;
+DROP DATABASE IF EXISTS planner_db;
 
-CREATE DATABASE driver_db;
+CREATE DATABASE planner_db;

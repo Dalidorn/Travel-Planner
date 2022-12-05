@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Driver extends Model {}
+class Trip extends Model {}
 
-Driver.init(
+Trip.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,11 +11,11 @@ Driver.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    trip_budget: {
+      type: DataTypes.INTEGER,
     },
-    age: {
-      type: DataTypes.STRING,
+    traveller_amount: {
+      type: DataTypes.INTEGER,
     },
   },
   {
@@ -23,8 +23,8 @@ Driver.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'driver',
+    modelName: 'trip',
   }
 );
 
-module.exports = Driver;
+module.exports = Trip;
