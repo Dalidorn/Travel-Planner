@@ -13,10 +13,28 @@ Trip.init(
     },
     trip_budget: {
       type: DataTypes.INTEGER,
+      allowNull: true,
     },
     traveller_amount: {
       type: DataTypes.INTEGER,
+      allowNull: true,
     },
+    traveller_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "traveller",
+        key: "id"
+      }
+    },
+    location_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "location",
+        key: "id"
+      }
+    }
   },
   {
     sequelize,
